@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _num_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./num.js */ \"./src/num.js\");\n/**\n * 入口文件，引入 print 方法，并执行\n * 定义了一个 button 方法，为页面添加一个按钮，并为按钮设置了一个 onclick 事件，负责动态引入一个文件\n */\n\n\n(0,_num_js__WEBPACK_IMPORTED_MODULE_0__.print)()\n\nfunction button() {\n    const button = document.createElement('button')\n    const text = document.createTextNode('click me')\n    button.appendChild(text)\n    button.onclick = e => __webpack_require__.e(/*! import() */ \"src_info_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./info.js */ \"./src/info.js\")).then(res => {\n        console.log(res)\n        console.log(res.log)\n    })\n    return button\n}\n\ndocument.body.appendChild(button())\n\n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _num_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./num.js */ \"./src/num.js\");\n\n\n(0,_num_js__WEBPACK_IMPORTED_MODULE_0__.print)()\n\nfunction button() {\n    const button = document.createElement('button')\n    const text = document.createTextNode('click me')\n    button.appendChild(text)\n    button.onclick = e => __webpack_require__.e(/*! import() */ \"src_info_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./info.js */ \"./src/info.js\")).then(res => {\n        console.log(res)\n        console.log(res.log)\n    })\n    return button\n}\n\ndocument.body.appendChild(button())\n\n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/index.js?");
 
 /***/ }),
 
@@ -26,17 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _num
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"print\": () => (/* binding */ print)\n/* harmony export */ });\n/* harmony import */ var _temp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./temp.js */ \"./src/temp.js\");\n\nfunction print () {\n  (0,_temp_js__WEBPACK_IMPORTED_MODULE_0__.tmpPrint)() \n  console.log('我是 num.js 的 print 方法')\n}\n\n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/num.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"print\": () => (/* binding */ print)\n/* harmony export */ });\n/* harmony import */ var _temp_temp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./temp/temp.js */ \"./src/temp/temp.js\");\n\n\nvar str = \"执行num.js中的同步代码\"\nconsole.log(str)\nfunction print() {\n  _temp_temp_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].tmpPrint()\n  console.log('我是 num.js 的 print 方法')\n}\n\n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/num.js?");
 
 /***/ }),
 
-/***/ "./src/temp.js":
-/*!*********************!*\
-  !*** ./src/temp.js ***!
-  \*********************/
+/***/ "./src/temp/temp.js":
+/*!**************************!*\
+  !*** ./src/temp/temp.js ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"tmpPrint\": () => (/* binding */ tmpPrint)\n/* harmony export */ });\nfunction tmpPrint () {\n    console.log('tmp.js print')\n  }\n  \n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/temp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst tmpPrint = () => {\n  console.log('tmp.js print')\n}\n\nconst str = \"tempPrint\"\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  tmpPrint,\n  str\n});\n\n//# sourceURL=webpack://webpack-bundle-analysis/./src/temp/temp.js?");
 
 /***/ })
 
@@ -47,7 +47,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-            console.log("moduleId:",moduleId)
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
@@ -175,7 +174,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-              console.log('exports:',exports)
 /******/ 		};
 /******/ 	})();
 /******/ 	
